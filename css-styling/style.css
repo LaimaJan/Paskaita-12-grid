@@ -712,21 +712,6 @@ img {
 			"b"
 			"c"; */
 	}
-
-	#address {
-		/* grid-area: a; */
-	}
-
-	#contact {
-		/* grid-area: b; */
-		/* margin-top: 10px; */
-	}
-
-	#social {
-		/* grid-area: c; */
-
-		/* margin-top: 20px; */
-	}
 }
 
 @media (min-width: 1024px) {
@@ -796,10 +781,6 @@ img {
 		flex-direction: column; */
 	}
 
-	#work-experience-content {
-		/* border-right: none; */
-	}
-
 	.all-work-experience-content {
 		/* display: flex;
 		flex-direction: column;
@@ -842,20 +823,5 @@ img {
 			"a"
 			"b"
 			"c"; */
-	}
-
-	#address {
-		/* grid-area: a; */
-	}
-
-	#contact {
-		/* grid-area: b; */
-		/* margin-top: 10px; */
-	}
-
-	#social {
-		/* grid-area: c; */
-
-		/* margin-top: 20px; */
 	}
 }
