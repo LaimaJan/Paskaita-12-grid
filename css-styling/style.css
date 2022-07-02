@@ -6,30 +6,26 @@ body {
 }
 
 .page-content {
-	width: 1170px;
+	max-width: 1170px;
 	margin: auto;
 }
 
 header {
-	width: auto;
-	height: auto;
+	margin-bottom: 80px;
 }
 
 .header-top-box {
 	background-color: #7abcac;
-	display: inline-block;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	width: 100%;
-	margin-bottom: -5px;
+	height: 60px;
 }
 
 .header-bottom-box {
 	text-align: center;
 	border: 4px solid black;
-	width: 580px;
-	height: 190px;
+	max-width: 580px;
 	margin: 0 auto;
+	margin-top: -25px;
+	padding: 50px 80px;
 }
 
 header p {
@@ -46,61 +42,104 @@ header p {
 	font-size: 25px;
 	background-color: black;
 	color: white;
-	width: 250px;
+	max-width: 250px;
 	display: inline-block;
-	padding: 0 20px;
-	margin-top: -40px;
+	padding: 3px 20px;
 }
 
-main {
-	padding-top: 40px;
+.links-about-me {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
 }
 
 .title {
 	text-transform: uppercase;
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 #section-division {
 	height: 4px;
-	width: 1170px;
+	max-width: 1170px;
 	background-color: #dcdcdc;
-	display: inline-block;
 	margin-bottom: 15px;
-	margin-top: -15px;
+	display: flex;
 }
 
 #section-division div {
 	height: 12px;
-	width: 90px;
+	min-width: 90px;
 	background-color: #7abcac;
-	display: block;
 	margin-top: -5px;
 }
 
 .about-me {
 	margin-bottom: 80px;
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 20px;
+}
+
+#aboutMe-division {
+	height: 4px;
+	max-width: 780px;
+	background-color: #dcdcdc;
+	margin-bottom: 15px;
+	display: flex;
+}
+
+#aboutMe-division div {
+	height: 12px;
+	min-width: 90px;
+	background-color: #7abcac;
+	margin-top: -5px;
 }
 
 .lorem {
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 400;
 }
 
 .links ul {
 	list-style-type: none;
+	margin-top: 10px;
 }
 
 .links ul li {
-	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .links ul li a {
 	text-decoration: none;
+	font-weight: bold;
 	color: black;
 	text-align: center;
+	display: flex;
+	font-size: 19px;
+	align-items: center;
+	margin-left: 40px;
+}
+
+#links-division,
+#education-division-top,
+#personal-skills-division,
+#technical-skills-division {
+	height: 4px;
+	min-width: 350px;
+	background-color: #dcdcdc;
+	display: inline-block;
+	margin-bottom: 15px;
+	/* margin-top: -15px; */
+}
+
+#links-division div,
+#education-division-top div,
+#personal-skills-division div,
+#technical-skills-division div {
+	height: 12px;
+	max-width: 90px;
+	background-color: #7abcac;
+	display: block;
+	margin-top: -5px;
 }
 
 img {
@@ -109,10 +148,20 @@ img {
 	vertical-align: middle;
 }
 
+.education-personal-technical-skills {
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-between; */
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
 .education-top-content p,
 .education-bottom-content p {
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 600;
+	padding-bottom: 25px;
 }
 
 .education-top-content {
@@ -121,7 +170,7 @@ img {
 
 #education-division {
 	height: 4px;
-	width: 201px;
+	min-width: 201px;
 	background-color: #dcdcdc;
 	display: inline-block;
 	margin-bottom: 15px;
@@ -129,8 +178,15 @@ img {
 }
 
 .links,
-.education {
+.education,
+.personal-skills {
 	padding-bottom: 15px;
+	margin-right: 20px;
+}
+
+.section,
+.footer {
+	min-width: 360px;
 }
 
 .education p {
@@ -139,7 +195,7 @@ img {
 
 .personal-skills p,
 .technical-skills p {
-	font-size: 16px;
+	font-size: 19px;
 	font-weight: 500;
 	text-transform: uppercase;
 	padding: 2px 10px 2px 10px;
@@ -148,21 +204,21 @@ img {
 .green {
 	background-color: #7abcac;
 	border-radius: 10px;
-	width: fit-content;
+	max-width: fit-content;
 	margin-bottom: 30px;
 }
 
 .yellow {
 	background-color: #d8da79;
 	border-radius: 10px;
-	width: fit-content;
+	max-width: fit-content;
 	margin-bottom: 30px;
 }
 
 .orange {
 	background-color: #c29486;
 	border-radius: 10px;
-	width: fit-content;
+	max-width: fit-content;
 	margin-bottom: 30px;
 }
 
@@ -173,7 +229,15 @@ img {
 .work-experience-content-top {
 	text-align: center;
 	line-height: 10px;
-	padding-bottom: 5px;
+	padding-bottom: 25px;
+	/* display: flex;
+	flex-direction: column; */
+
+	padding-top: 25px;
+}
+
+.work-experience-content-top p {
+	padding: 8px;
 }
 
 .work-experience-content-bottom {
@@ -183,52 +247,86 @@ img {
 
 .work-exp-job-title {
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 18px;
 	text-transform: uppercase;
 }
 
 .all-work-experience-content {
-	display: inline-flex;
+	/* display: flex;
+	flex-direction: row;
+	max-width: fit-content;
+	justify-content: space-between; */
+
+	display: grid;
+	grid-template-columns: repeat(3, 33.33%);
 }
 
-.work-experience-content-bottom ul {
-	padding-left: 20px;
+.work-experience-content-bottom ul li {
+	list-style-type: circle;
+	line-height: normal;
+	margin-top: 10px;
+	margin-left: 15px;
 }
 
 .work-experience-content-bottom p {
 	text-align: justify;
+	font-size: 18px;
+	line-height: normal;
+}
+
+.work-experience-content {
+	padding-right: 30px;
+	padding-left: 30px;
 }
 
 #work-experience-content {
 	border-right: 3px solid #dcdcdc;
-	height: 250px;
+	/* padding-right: 30px;
+	padding-left: 30px; */
 }
 
 .footer {
-	display: inline-flex;
-	padding-bottom: 40px;
-}
-
-#address {
-	margin-left: 30px;
-}
-
-#contact {
-	margin-left: 120px;
-}
-
-#social {
-	margin-left: 120px;
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start; */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	min-width: 360px;
+	max-width: 1170px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	grid-template-areas: "a b c";
 }
 
 .footer-content {
-	text-align: center;
-	margin-left: 70px;
+	/* text-align: center;
+	display: flex;
+	flex-direction: column; */
+	display: grid;
+	grid-template-rows: repeat(1, 30px);
 }
 
-.footer-content a {
+#address {
+	grid-area: a;
+}
+
+#contact {
+	grid-area: b;
+	margin: auto;
+}
+
+#social {
+	grid-area: c;
+	margin: auto;
+}
+
+.footer-content a,
+.address-city {
 	text-decoration: none;
 	color: black;
+	font-size: 18px;
+	/* margin-top: 5px; */
 	text-align: center;
 }
 
@@ -250,16 +348,514 @@ img {
 	font-size: 25px;
 	background-color: black;
 	color: white;
-	width: 250px;
-	padding: 0 20px;
+	max-width: 250px;
+	/* padding: 2px 80px; */
 	text-transform: uppercase;
+	margin: auto;
+	padding: 3px 50px;
 	text-align: center;
 }
 
-.address-city {
-	margin: 0;
+.address-city,
+.phone,
+.linkedin {
+	padding-top: 10px;
+}
+.email,
+.twitter {
+	margin-top: -10px;
 }
 
-.address-street {
-	margin-bottom: 0;
+/* MEDIA STARTS HERE*/
+
+@media (max-width: 360px) {
+	.links-about-me {
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+	}
+
+	.links,
+	.about-me,
+	.education,
+	.personal-skills,
+	.technical-skills,
+	.work-experience {
+		margin-left: 10px;
+	}
+
+	.about-me {
+		margin-top: -40px;
+	}
+
+	.education-personal-technical-skills {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+	}
+
+	.education {
+		grid-area: a;
+		margin-top: 30px;
+	}
+
+	.personal-skills {
+		grid-area: b;
+		margin-top: 60px;
+	}
+
+	.technical-skills {
+		grid-area: c;
+		margin-top: -10px;
+	}
+
+	.work-experience-content-top {
+		text-align: center;
+		line-height: 10px;
+		padding-bottom: 25px;
+		/* display: flex;
+		flex-direction: column; */
+	}
+
+	#work-experience-content {
+		border-right: none;
+	}
+
+	.all-work-experience-content {
+		/* display: flex;
+		flex-direction: column;
+		max-width: fit-content;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(3, 33.33%);
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+		padding-top: 25px;
+	}
+
+	.wk-1 {
+		grid-area: a;
+	}
+
+	.wk-2 {
+		grid-area: b;
+		margin-top: 10px;
+	}
+
+	.wk-3 {
+		grid-area: c;
+		margin-top: 10px;
+	}
+
+	.footer {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center; */
+		margin-top: 40px;
+
+		display: grid;
+		grid-template-rows: repeat(3, 33.33%);
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+	}
+
+	#address {
+		grid-area: a;
+	}
+
+	#contact {
+		grid-area: b;
+		margin-top: 10px;
+	}
+
+	#social {
+		grid-area: c;
+
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 361px) and (max-width: 767px) {
+	.links-about-me {
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+	}
+
+	.links,
+	.about-me,
+	.education,
+	.personal-skills,
+	.technical-skills,
+	.work-experience {
+		margin-left: 10px;
+	}
+
+	.education-personal-technical-skills {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+	}
+
+	.education {
+		grid-area: a;
+		margin-top: 20px;
+	}
+
+	.personal-skills {
+		grid-area: b;
+		margin-top: 60px;
+	}
+
+	.technical-skills {
+		grid-area: c;
+		margin-top: -10px;
+	}
+
+	.work-experience-content-top {
+		text-align: center;
+		line-height: 10px;
+		padding-bottom: 25px;
+		/* display: flex;
+		flex-direction: column; */
+	}
+
+	#work-experience-content {
+		border-right: none;
+	}
+
+	.all-work-experience-content {
+		/* display: flex;
+		flex-direction: column;
+		max-width: fit-content;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(3, 33.33%);
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+		padding-top: 25px;
+	}
+
+	.wk-1 {
+		grid-area: a;
+	}
+
+	.wk-2 {
+		grid-area: b;
+		margin-top: 10px;
+	}
+
+	.wk-3 {
+		grid-area: c;
+		margin-top: 10px;
+	}
+
+	.footer {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center; */
+		margin-top: 40px;
+
+		display: grid;
+		grid-template-rows: repeat(3, 33.33%);
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"a"
+			"b"
+			"c";
+	}
+
+	#address {
+		grid-area: a;
+		/* margin:0; */
+	}
+
+	#contact {
+		grid-area: b;
+		margin-top: 10px;
+	}
+
+	#social {
+		grid-area: c;
+
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.links-about-me {
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: 1fr;
+	}
+
+	.links,
+	.about-me,
+	.education,
+	.personal-skills,
+	.technical-skills,
+	.work-experience {
+		margin-left: 10px;
+	}
+
+	/* .about-me {
+		margin-top: -40px;
+	} */
+
+	.education-personal-technical-skills {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		/* grid-template-areas:
+			"a b"
+			"c"; */
+	}
+	/* 
+	.education {
+		grid-area: a;
+	}
+
+	.personal-skills {
+		grid-area: b;
+	}
+
+	.technical-skills {
+		grid-area: c; */
+
+	.work-experience-content-top {
+		text-align: center;
+	}
+
+	#work-experience-content {
+		border-right: none;
+	}
+
+	.all-work-experience-content {
+		/* display: flex;
+		flex-direction: column;
+		max-width: fit-content;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+
+		padding-top: 25px;
+	}
+
+	.wk-1 {
+		grid-column: 1/2;
+		grid-row: 1/1;
+	}
+
+	.wk-2 {
+		grid-column: 2/2;
+		grid-row: 1/1;
+	}
+
+	.wk-3 {
+		grid-column: auto;
+		grid-row: 2/2;
+	}
+
+	.footer {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center; */
+		margin-top: 40px;
+
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-areas:
+			"a"
+			"b"
+			"c"; */
+	}
+
+	#address {
+		/* grid-area: a; */
+	}
+
+	#contact {
+		/* grid-area: b; */
+		/* margin-top: 10px; */
+	}
+
+	#social {
+		/* grid-area: c; */
+
+		/* margin-top: 20px; */
+	}
+}
+
+@media (min-width: 1024px) {
+	.links-about-me {
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-template-areas: "a b b";
+	}
+
+	.links {
+		grid-area: a;
+		/* grid-column: 1/3; */
+	}
+
+	.about-me {
+		grid-area: b;
+		/* grid-column: 2/3; */
+	}
+
+	.links,
+	.about-me,
+	.education,
+	.personal-skills,
+	.technical-skills,
+	.work-experience {
+		margin-left: 10px;
+	}
+
+	/* .about-me {
+		margin-top: -40px;
+	} */
+
+	.education-personal-technical-skills {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-areas:
+			"a b"
+			"c"; */
+	}
+	/* 
+	.education {
+		grid-area: a;
+	}
+
+	.personal-skills {
+		grid-area: b;
+	}
+
+	.technical-skills {
+		grid-area: c; 
+	} */
+
+	.work-experience-content-top {
+		text-align: center;
+		line-height: 10px;
+		padding-bottom: 25px;
+		/* display: flex;
+		flex-direction: column; */
+	}
+
+	#work-experience-content {
+		/* border-right: none; */
+	}
+
+	.all-work-experience-content {
+		/* display: flex;
+		flex-direction: column;
+		max-width: fit-content;
+		justify-content: space-between; */
+		display: grid;
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-areas:
+			"a b"
+			"c";
+		padding-top: 25px; */
+	}
+
+	/* .wk-1 {
+		grid-area: a;
+	}
+
+	.wk-2 {
+		grid-area: b;
+		margin-top: 10px;
+	}
+
+	.wk-3 {
+		grid-area: c;
+		margin-top: 10px;
+	} */
+
+	.footer {
+		/* display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center; */
+		margin-top: 40px;
+
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-areas:
+			"a"
+			"b"
+			"c"; */
+	}
+
+	#address {
+		/* grid-area: a; */
+	}
+
+	#contact {
+		/* grid-area: b; */
+		/* margin-top: 10px; */
+	}
+
+	#social {
+		/* grid-area: c; */
+
+		/* margin-top: 20px; */
+	}
 }
